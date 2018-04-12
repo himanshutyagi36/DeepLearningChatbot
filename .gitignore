@@ -1,2 +1,5 @@
 dataset/*
 *.db
+py3env/*
+2015-05*
+test*

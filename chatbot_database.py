@@ -132,6 +132,10 @@ if __name__ == '__main__':
             if row_counter % 100000 == 0:
                 print('Total Rows Read: {}, Paired Rows: {}, Time: {}'.format(row_counter, paired_rows, str(datetime.now())))
 
+# We find there is significant bloat that we need to handle for. 
+# This is because only about 10% of the comments are getting paired, so a large % of our database is not actually going to be used.
+# clean the database for every 1 million comments read, so as to increase the speed of insertion into the database. 
+# this causes a minor loss of paired comments.
             if row_counter > start_row:
                 if row_counter % cleanup == 0:
                     print("Cleanin up!")
