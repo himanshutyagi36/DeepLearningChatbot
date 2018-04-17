@@ -3,4 +3,4 @@ dataset/*
 py3env/*
 2015-05*
 test*
-nmt-chatbot/
+#nmt-chatbot/
